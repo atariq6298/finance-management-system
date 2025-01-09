@@ -3,3 +3,5 @@ api/migrations/0004_transaction_budget.py
 api/__pycache__/models.cpython-38.pyc
 api/__pycache__/serializers.cpython-38.pyc
 db.sqlite3
+api/__pycache__/models.cpython-38.pyc
+api/__pycache__/serializers.cpython-38.pyc
