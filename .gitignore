@@ -1,5 +1,6 @@
-api/migrations/*
-api/migrations/*
+# Ignore migrations
+api/migrations/
+
 # Ignore node_modules directory
 node_modules/
 
@@ -14,8 +15,8 @@ node_modules/
 dist/
 build/
 
-# Ignore temporary files
-*__pycache__
+# Ignore __pycache__ directories
+__pycache__
 *.tmp
 *.swp
 
@@ -27,5 +28,6 @@ Thumbs.db
 .vscode/
 .idea/
 *.iml
-*db.sqlite3
-db.sqlite3
+
+# Ignore SQLite database files
+*.sqlite3
