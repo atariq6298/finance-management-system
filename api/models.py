@@ -29,6 +29,7 @@ class Budget(models.Model):
         return self.name
 
 class Transaction(models.Model):
+    budget = models.ForeignKey(Budget, on_delete=models.CASCADE, related_name='transactions', null= True)
     description = models.CharField(max_length=255)
     amount = models.DecimalField(max_digits=10, decimal_places=2)
     transaction_date = models.DateTimeField()
