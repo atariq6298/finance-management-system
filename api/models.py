@@ -37,6 +37,16 @@ class Budget(models.Model):
     def __str__(self):
         return self.name
 
+class Account(models.Model):
+    name = models.CharField(max_length=255)
+    balance = models.DecimalField(max_digits=15, decimal_places=2)
+    account_type = models.CharField(max_length=50)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return self.name
+
 class Transaction(models.Model):
     budget = models.ForeignKey(Budget, on_delete=models.CASCADE, related_name='transactions', null= True)
     description = models.CharField(max_length=255)
@@ -52,15 +62,7 @@ class Transaction(models.Model):
     def __str__(self):
         return self.description
 
-class Account(models.Model):
-    name = models.CharField(max_length=255)
-    balance = models.DecimalField(max_digits=15, decimal_places=2)
-    account_type = models.CharField(max_length=50)
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
 
-    def __str__(self):
-        return self.name
 
 class RecurringExpense(models.Model):
     name = models.CharField(max_length=255)
