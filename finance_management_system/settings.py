@@ -36,6 +36,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'api',  # Add your API app here
     'rest_framework',
+    'authentication',
+    "phonenumber_field",
+
 ]
 
 MIDDLEWARE = [
@@ -118,3 +121,8 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/4.x/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+AUTH_PROFILE_MODULE = 'authentication.User'
+
+AUTH_USER_MODEL = 'authentication.User'
+PHONENUMBER_DEFAULT_REGION = 'PK'

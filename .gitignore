@@ -31,3 +31,5 @@ Thumbs.db
 
 # Ignore SQLite database files
 *.sqlite3
+finance_management_system/__pycache__/settings.cpython-38.pyc
+finance_management_system/__pycache__/urls.cpython-38.pyc
